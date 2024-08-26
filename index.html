@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="assets/icono.ico"/>
 </head>
 <body>
-    <header>
-        <img src="assets/logo.png" alt="">
+    <header class="header">
+        <img src="assets/f42e28123dfdb7b9413bbad44e5e46ab.png" alt="">
     </header>
-    <main>
-        <section>
-            <textarea name="" id="" placeholder="Ingrese el texto aqui" ></textarea>
-            <div class="aviso">
+    <main class="main">
+        <section class="main__section">
+            <textarea name="" id="inputTexto" placeholder="Ingrese el texto aqui" class="main__section--textarea"></textarea>
+            <div class="main__section--aviso">
                 <img src="assets/Group.png" alt="">
                 <p>Solo letras minusculas y sin acentos</p>
             </div>
-            <div class="buttoms">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
-            </div>
+            <div class="main__section--buttons">
+                <button class="main__section--buttons--1" onclick="btnEncriptar()">Encriptar</button>
+                <button class="main__section--buttons--2" onclick="btnDesencriptar()" >Desencriptar</button>
+                <button class="main__section--buttons--3" onclick="btnLimpiar()" >Limpiar</button>
+            </div>      
         </section>
-        <aside>
-            <div></div>
+        <aside class="main__aside">
+            <div class="main__aside--bloque1" id="bloque1">
+                <img src="assets/Muñeco.png" alt="">
+                <p class="main__aside--bloque1--text1">Ningun mensaje fue encontrado</p>
+                <p class="main__aside--bloque1--text2">ingresa el texto que desea encriptar o desencriptar.</p>
+            </div>
+            <div class="main__aside--bloque2" id="bloque2">
+                <textarea name="" id="resultado" readonly></textarea>
+                <button onclick="btnCopiar()" id="btncopy" >Copiar</button>
+            </div>
         </aside>
     </main>
-    <footer>
+    <footer class="footer">
         <p>Powered by Muro</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
